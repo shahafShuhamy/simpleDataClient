@@ -11,8 +11,9 @@ ul {
   background-color: $bg-site-color;
   li {
     width: 100px;
-    height: 48px;
-    border: 0.2px solid rgb(75, 70, 70);
+    height: 46px;
+    margin-right: -1px;
+    border: 0.05px solid $bg-site-border;
     cursor: pointer;
     a {
       display: block;
@@ -22,12 +23,17 @@ ul {
       text-decoration: none;
     }
     a:hover {
-        background-color: $nav-button-bg-color;
+        background-color: $bg-color-hover;
     }
     img {
-      padding: 14px 16px;
+      position: relative;
+      left: 28px;
+      top: 2px;
       width: $icon-width;
       height: $icon-height;
     }
+  }
+  li:hover {
+    background-color: $bg-color-hover;
   }
 }
