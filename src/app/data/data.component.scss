@@ -1,0 +1,35 @@
+@import "../../assets/colors.scss";
+@import "../../assets/properties.scss";
+
+.container {
+  display: flex;
+  padding: 20px 20px;
+  .half {
+    width: 50%;
+  }
+  .tabs {
+    width: auto;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: $bg-color;
+    .img-with-span {
+      cursor: pointer;
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      span {
+        text-align: center;
+      }
+      a {
+        margin: 5px 10px;
+        img {
+          width: $icon-width + 20px;
+          height: $icon-height + 20px;
+        }
+      }
+    }
+    .img-with-span:hover {
+      background-color: $bg-color-hover;
+    }
+  }
+}
