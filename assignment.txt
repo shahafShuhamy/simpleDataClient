@@ -1,0 +1,10 @@
+build a web page with a top navbar
+the top navbar will hold a home logo and data button
+data button will load a component with a filter list and a view options tab, by calling service returning json with users.
+users json:         each user have a name, city address, street address and an ID.
+                    data will be recieved with redux.
+filters list:       filter list will be city filters, which assembled from the users unique cities.
+view options tabs:  2 view options
+                        1. grid that will display all users with rows.
+                        2. cards that will display each user in a card.
+by clicking on the view tab the view will change to the active tab one.
