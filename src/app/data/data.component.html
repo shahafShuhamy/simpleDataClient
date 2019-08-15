@@ -1,8 +1,12 @@
 <div class="container">
-    <div class="half">filters</div>
-    <div class="tabs half">
-        <div class="img-with-span"><a><img src="../../assets/List.svg" alt="List view"></a><span>list</span></div>
-        <div class="img-with-span"><a><img src="../../assets/Card.svg" alt="Cards view"></a><span>cards</span></div>
+    <div class="tabs">
+        <div class="center">
+            <div class="img-with-span"><a routerLink="/list"><img src="../../assets/List.svg" alt="List view"></a><span>list</span></div>
+            <div class="img-with-span"><a routerLink="/cards"><img src="../../assets/Card.svg" alt="Cards view"></a><span>cards</span></div>  
+        </div>
+      <div class="flex">
+            <div class="half">filters</div>
+            <router-outlet></router-outlet>
+          </div>
       </div>
-    <div>tab display</div>
 </div>

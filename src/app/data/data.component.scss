@@ -4,11 +4,19 @@
 .container {
   display: flex;
   padding: 20px 20px;
+  .center {
+    display: flex;
+    justify-content: center;
+  }
   .half {
     width: 50%;
   }
   .tabs {
-    width: auto;
+    .flex {
+      padding: 20px 20px;
+      display: flex;
+    }
+    width: 100vw;
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: $bg-site-color;
