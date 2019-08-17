@@ -1,0 +1,23 @@
+// .card {
+//     display: flex;
+//     min-width: 200px;
+//     min-height: 70px;
+//     border: 1px solid black;
+//     border-radius: 6px;
+//     padding: 5px 5px;
+//     margin: 10px;
+// }
+
+
+  
+  .card {
+    display: flex;
+    width: 200px;
+    height: 100px;
+    line-height: 100px;
+    background-color: grey;
+    margin: 10px;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+  }

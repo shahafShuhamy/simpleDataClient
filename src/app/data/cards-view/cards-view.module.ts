@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { CardsViewRoutingModule } from './cards-view-routing.module';
 import { CardsViewComponent } from './cards-view.component';
+import { CardComponent } from './card/card.component';
 
 
 @NgModule({
   declarations: [
-    CardsViewComponent
+    CardsViewComponent,
+    CardComponent
   ],
   imports: [
     CommonModule,
