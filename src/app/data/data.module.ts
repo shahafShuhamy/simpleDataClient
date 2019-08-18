@@ -5,11 +5,13 @@ import {ListViewComponent} from './list-view/list-view.component';
 import {CardsViewComponent} from './cards-view/cards-view.component';
 import { DataRoutingModule } from './data-routing.module';
 import { DataComponent } from './data.component';
+import { FiltersComponent } from './filters/filters.component';
 
 
 @NgModule({
   declarations: [
-    DataComponent
+    DataComponent,
+    FiltersComponent
   ],
   imports: [
     CommonModule,

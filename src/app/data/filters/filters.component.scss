@@ -1,0 +1,8 @@
+
+@import '../../../assets/colors.scss';
+.filters-list {
+    list-style: none;
+    .city-li{
+        color: $font-color;
+    }
+}

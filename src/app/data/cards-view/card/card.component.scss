@@ -1,23 +1,18 @@
-// .card {
-//     display: flex;
-//     min-width: 200px;
-//     min-height: 70px;
-//     border: 1px solid black;
-//     border-radius: 6px;
-//     padding: 5px 5px;
-//     margin: 10px;
-// }
-
+@import '../../../../assets/colors.scss';
 
   
   .card {
     display: flex;
+    flex-direction: column;
     width: 200px;
     height: 100px;
-    line-height: 100px;
-    background-color: grey;
+    padding-top: 10px;
+    padding-left: 10px;
+    border-radius: 6px;
+    background-color: $inner-elem-color;
     margin: 10px;
-    color: white;
-    text-align: center;
-    vertical-align: middle;
+    color: $cards-font-color;
+    border: 0.5px solid $dark-border-color;
+    text-align: start;
+    padding-right: 5px;
   }
