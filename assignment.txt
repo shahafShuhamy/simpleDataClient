@@ -8,3 +8,6 @@ view options tabs:  2 view options
                         1. grid that will display all users with rows.
                         2. cards that will display each user in a card.
 by clicking on the view tab the view will change to the active tab one.
+left to do:
+    1. redux getting data and state management.
+    2. responsive? 

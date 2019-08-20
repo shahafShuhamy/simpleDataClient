@@ -8,6 +8,7 @@ import { DataService } from '../data.service';
 })
 export class FiltersComponent implements OnInit {
   cityList;
+  filterList = [];
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
@@ -15,16 +16,23 @@ export class FiltersComponent implements OnInit {
     this.cityList = Array.from(
       new Set(this.cityList.map(obj => obj.addressCity)))
       .map(userCity => {
-      return {
-        city: userCity
-      }
+      return userCity;
     });
     console.log(this.cityList);
   }
 
-  setFilter(event: any,i: any) {
-    console.log(i);
-    console.log(event);
+  setFilter(inputBool: boolean, i: number) {
+    if (inputBool) {
+      this.filterList.push(this.cityList[i]);
+    } else {
+      this.filterList = this.filterList.filter((cityObj) => {
+         if (cityObj !== this.cityList[i]) {
+           return cityObj;
+         }
+      });
+    }
+    // TODO: remove inputBool and index
+    this.dataService.updateFilterList(inputBool, i, this.filterList);
   }
 
 }

@@ -1,11 +1,15 @@
 import { Injectable } from '@angular/core';
 import { User } from './User';
+import { Subject } from 'rxjs';
+import { FilterUpdate } from './FilterUpdate';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
   users;
+  fullUsersList;
+  filterChanged: Subject<FilterUpdate> = new Subject();
   constructor() { }
 
   getData(): User[] {
@@ -23,7 +27,13 @@ export class DataService {
         new  User(10, 'Dror', 'Gan-Yavne', 'Tel-Hai', 12),
         new  User(0, 'Sufa', 'Gan-Yavne', 'Tel-Hai', 12),
         ];
+      this.fullUsersList = this.users;
     }
     return this.users;
+  }
+// TODO: check if need filter index and state and remove if not.
+  updateFilterList(state: boolean, index: number, cityList: string[]) {
+    const filterUpdate = new FilterUpdate(state, index, cityList);
+    this.filterChanged.next(filterUpdate);
   }
 }
