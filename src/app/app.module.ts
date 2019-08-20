@@ -5,7 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
 import { DataModule } from './data/data.module';
-import {DataComponent} from './data/data.component';
+import { StoreModule } from '@ngrx/store';
+import { simpleReducer } from './simpleReducer';
 import { HomeComponent } from './home/home.component';
 
 @NgModule({
@@ -17,7 +18,8 @@ import { HomeComponent } from './home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DataModule
+    DataModule,
+    StoreModule.forRoot({ message: simpleReducer})
   ],
   providers: [],
   bootstrap: [AppComponent]
