@@ -31,8 +31,7 @@ export class FiltersComponent implements OnInit {
          }
       });
     }
-    // TODO: remove inputBool and index
-    this.dataService.updateFilterList(inputBool, i, this.filterList);
+    this.dataService.updateFilterList(this.filterList);
   }
 
 }

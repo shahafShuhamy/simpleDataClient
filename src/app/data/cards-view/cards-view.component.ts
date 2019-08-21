@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { User } from '../../data/User';
+import { Observable } from 'rxjs';
 import { DataService } from '../data.service';
 import { FilterUpdate } from '../FilterUpdate';
 

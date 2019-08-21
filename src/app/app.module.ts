@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
 import { DataModule } from './data/data.module';
 import { StoreModule } from '@ngrx/store';
-import { simpleReducer } from './simpleReducer';
 import { HomeComponent } from './home/home.component';
+import { reducer } from './reducers/user.reducers';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     AppRoutingModule,
     DataModule,
-    StoreModule.forRoot({ message: simpleReducer})
+    StoreModule.forRoot({ user: reducer})
   ],
   providers: [],
   bootstrap: [AppComponent]

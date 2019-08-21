@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../User';
 import { DataService } from '../data.service';
 import { FilterUpdate } from '../FilterUpdate';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-list-view',

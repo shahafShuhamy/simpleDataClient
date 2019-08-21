@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from './data.service';
 import { User } from './User';
+import { Store } from '@ngrx/store';
+import { AppState } from './../app.state';
 
 @Component({
   selector: 'app-data',
@@ -8,8 +10,12 @@ import { User } from './User';
   styleUrls: ['./data.component.scss']
 })
 export class DataComponent implements OnInit {
-  constructor(private dataService: DataService) { }
+  users;
+  constructor(private dataService: DataService, private store: Store<AppState>) {
+    this.users = this.store.select('user');
+   }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
 }
